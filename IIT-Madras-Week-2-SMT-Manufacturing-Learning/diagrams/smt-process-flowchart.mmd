@@ -1,0 +1,15 @@
+flowchart TD
+    A[PCB preparation] --> B[Solder Paste Printing<br/>SPP]
+    B --> C[Solder Paste Inspection<br/>SPI]
+    C --> D[Component Pick and Place]
+    D --> E[Reflow Oven]
+    E --> F[Automated Optical Inspection<br/>AOI]
+    F --> G[Defect review and<br/>corrective action]
+    G --> H[Further testing, if required]
+    H --> I[Assembled PCB]
+    classDef process fill:#EAF2FF,stroke:#2457A7,color:#10233F,stroke-width:1.5px;
+    classDef inspection fill:#E7F7EF,stroke:#16825D,color:#103D2B,stroke-width:1.5px;
+    classDef inputoutput fill:#FFF3D9,stroke:#B7791F,color:#4A3210,stroke-width:1.5px;
+    class A,I inputoutput;
+    class C,F inspection;
+    class B,D,E,G,H process;
